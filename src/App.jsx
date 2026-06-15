@@ -157,8 +157,7 @@ export default function App() {
     });
     // Map color key to UI accent theme
     if (field === 'colorPalette') {
-      if (value === 'orange') setAccentTheme('orange');
-      else if (value === 'blue') setAccentTheme('blue');
+      setAccentTheme(value);
     }
   };
 
@@ -170,7 +169,14 @@ export default function App() {
   };
 
   const toggleAccentTheme = () => {
-    setAccentTheme((prev) => (prev === 'orange' ? 'blue' : 'orange'));
+    const keys = ['orange', 'blue', 'green', 'pink', 'purple', 'red', 'teal', 'indigo', 'yellow', 'gold', 'darkgray', 'lightgray'];
+    setAccentTheme((prev) => {
+      const idx = keys.indexOf(prev);
+      const nextTheme = keys[idx === -1 ? 0 : (idx + 1) % keys.length];
+      // Also update the form data colorPalette!
+      setFormData((prevForm) => ({ ...prevForm, colorPalette: nextTheme }));
+      return nextTheme;
+    });
   };
 
   const handleClearForm = (e) => {
@@ -301,7 +307,7 @@ export default function App() {
             onClick={toggleAccentTheme}
             title={lang === 'en' ? 'Toggle accent color' : 'Alternar cor de destaque'}
           >
-            {accentTheme === 'orange' ? '🔵' : '🟠'}
+            <div className="theme-toggle-dot" />
           </button>
           <button type="button" className="lang-btn" onClick={toggleLanguage}>
             {lang === 'pt' ? 'EN' : 'PT'}

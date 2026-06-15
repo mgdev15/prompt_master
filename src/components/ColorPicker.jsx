@@ -7,8 +7,12 @@ const colorHexMap = {
   pink:      '#e91e8c',
   purple:    '#9b59b6',
   darkgray:  '#555f6e',
-  red:       '#e74c3c',
-  lightgray: '#bdc3c7'
+  red:       '#ff0000',
+  lightgray: '#bdc3c7',
+  teal:      '#1abc9c',
+  indigo:    '#6c5ce7',
+  yellow:    '#f1c40f',
+  gold:      '#d4af37'
 };
 
 /**

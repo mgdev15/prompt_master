@@ -92,7 +92,11 @@ export const i18n = {
       purple:    "Roxo",
       darkgray:  "Cinza",
       red:       "Vermelho",
-      lightgray: "Neutro"
+      lightgray: "Neutro",
+      teal:      "Turquesa",
+      indigo:    "Índigo",
+      yellow:    "Amarelo",
+      gold:      "Dourado"
     },
 
     styleLabel: "Estilo visual",
@@ -290,7 +294,11 @@ export const i18n = {
       purple:    "Purple",
       darkgray:  "Dark Gray",
       red:       "Red",
-      lightgray: "Light Gray"
+      lightgray: "Light Gray",
+      teal:      "Teal",
+      indigo:    "Indigo",
+      yellow:    "Yellow",
+      gold:      "Gold"
     },
 
     styleLabel: "Visual style",

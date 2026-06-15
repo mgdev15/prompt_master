@@ -36,8 +36,29 @@ select option {
     
     --accent-orange: #e67e22;
     --accent-blue: #3498db;
+    --accent-green: #27ae60;
+    --accent-pink: #e91e8c;
+    --accent-purple: #9b59b6;
+    --accent-darkgray: #555f6e;
+    --accent-red: #ff0000;
+    --accent-lightgray: #bdc3c7;
+    --accent-teal: #1abc9c;
+    --accent-indigo: #6c5ce7;
+    --accent-yellow: #f1c40f;
+    --accent-gold: #d4af37;
+
     --accent-glow-orange: rgba(230, 126, 34, 0.15);
     --accent-glow-blue: rgba(52, 152, 219, 0.15);
+    --accent-glow-green: rgba(39, 174, 96, 0.15);
+    --accent-glow-pink: rgba(233, 30, 140, 0.15);
+    --accent-glow-purple: rgba(155, 89, 182, 0.15);
+    --accent-glow-darkgray: rgba(85, 95, 110, 0.15);
+    --accent-glow-red: rgba(255, 0, 0, 0.15);
+    --accent-glow-lightgray: rgba(189, 195, 199, 0.15);
+    --accent-glow-teal: rgba(26, 188, 156, 0.15);
+    --accent-glow-indigo: rgba(108, 92, 231, 0.15);
+    --accent-glow-yellow: rgba(241, 196, 15, 0.15);
+    --accent-glow-gold: rgba(212, 175, 55, 0.15);
     
     /* Active theme configuration */
     --theme-color: var(--accent-orange);
@@ -62,10 +83,49 @@ body.theme-orange {
     --theme-color: var(--accent-orange);
     --theme-glow: var(--accent-glow-orange);
 }
-
 body.theme-blue {
     --theme-color: var(--accent-blue);
     --theme-glow: var(--accent-glow-blue);
+}
+body.theme-green {
+    --theme-color: var(--accent-green);
+    --theme-glow: var(--accent-glow-green);
+}
+body.theme-pink {
+    --theme-color: var(--accent-pink);
+    --theme-glow: var(--accent-glow-pink);
+}
+body.theme-purple {
+    --theme-color: var(--accent-purple);
+    --theme-glow: var(--accent-glow-purple);
+}
+body.theme-darkgray {
+    --theme-color: var(--accent-darkgray);
+    --theme-glow: var(--accent-glow-darkgray);
+}
+body.theme-red {
+    --theme-color: var(--accent-red);
+    --theme-glow: var(--accent-glow-red);
+}
+body.theme-lightgray {
+    --theme-color: var(--accent-lightgray);
+    --theme-glow: var(--accent-glow-lightgray);
+}
+body.theme-teal {
+    --theme-color: var(--accent-teal);
+    --theme-glow: var(--accent-glow-teal);
+}
+body.theme-indigo {
+    --theme-color: var(--accent-indigo);
+    --theme-glow: var(--accent-glow-indigo);
+}
+body.theme-yellow {
+    --theme-color: var(--accent-yellow);
+    --theme-glow: var(--accent-glow-yellow);
+}
+body.theme-gold {
+    --theme-color: var(--accent-gold);
+    --theme-glow: var(--accent-glow-gold);
 }
 
 /* --- Base Reset & Defaults --- */
@@ -117,7 +177,7 @@ header {
 
 .logo-icon {
     font-size: 1.75rem;
-    background: linear-gradient(135deg, var(--accent-orange), var(--accent-blue));
+    background: linear-gradient(135deg, var(--theme-color), var(--text-primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
@@ -183,6 +243,19 @@ header {
 .theme-toggle:hover {
     color: var(--text-primary);
     border-color: var(--theme-color);
+}
+
+.theme-toggle-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--theme-color);
+    box-shadow: 0 0 8px var(--theme-glow);
+    transition: var(--transition-smooth);
+}
+
+.theme-toggle:hover .theme-toggle-dot {
+    transform: scale(1.25);
 }
 
 /* --- Form Layout & Step Cards --- */
@@ -388,14 +461,14 @@ textarea {
 /* --- Color Circle Radio Selector --- */
 .color-picker {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.75rem;
     margin-top: 0.5rem;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 600px) {
     .color-picker {
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(12, 1fr);
     }
 }
 
@@ -809,7 +882,7 @@ textarea {
 
 .progress-bar-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--theme-color), var(--accent-blue));
+    background: var(--theme-color);
     border-radius: 2px;
     transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
