@@ -530,7 +530,7 @@ export default function App() {
       {/* ── Footer ── */}
       <footer className="app-footer">
         <p>
-          🧠 <strong>Prompt Master</strong> &mdash;{' '}
+          <strong>Prompt Master</strong> &mdash;{' '}
           {lang === 'en'
             ? 'Generate professional AI prompts for any website.'
             : 'Gere prompts profissionais de IA para qualquer site.'}
