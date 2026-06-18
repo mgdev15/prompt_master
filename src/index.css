@@ -187,9 +187,7 @@ header {
 }
 
 .logo-img {
-    height: 4rem;
-    margin-top: 8px;
-    pointer-events: none;
+    height: 2.5rem;
 }
 
 .logo-icon {

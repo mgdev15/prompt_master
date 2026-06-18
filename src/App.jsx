@@ -296,7 +296,7 @@ export default function App() {
       {/* ── Header ── */}
       <header>
         <a href="#" className="logo" onClick={handleClearForm}>
-          <img src="/logoPrompt.png" alt="Logo" className="logo-img" />
+          <img src="/prompt_logo_500x500.png" alt="Logo" className="logo-img" />
           <span className="logo-text">{t.title}</span>
         </a>
 
